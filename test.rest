@@ -1,0 +1,51 @@
+### Register
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "username": "user@mail.com", 
+    "password": "12345678"
+}
+
+### Login
+POST http://localhost:8000/auth/login
+Content-Type: application/json 
+
+{
+    "username": "user@mail.com", 
+    "password": "12345678"
+}
+
+### Create Entry Diary
+POST http://localhost:8000/api/entry
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYXQiOjE2OTg4MTQ1MzMsImlhdCI6MTY5ODgxMjUzMywiaWQiOjF9.Qbc91L7uGQsX_KaWuPqCGphfp0jPV8vGUQWFvaAkPyQ
+
+{
+    "content": "A sample content"
+}
+
+### GET All Entry Diary
+GET http://localhost:8000/api/entry
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYXQiOjE2OTg4MTQ1MzMsImlhdCI6MTY5ODgxMjUzMywiaWQiOjF9.Qbc91L7uGQsX_KaWuPqCGphfp0jPV8vGUQWFvaAkPyQ
+
+### GET A Single Entry Diary
+GET http://localhost:8000/api/entry/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYXQiOjE2OTg4MTQ1MzMsImlhdCI6MTY5ODgxMjUzMywiaWQiOjF9.Qbc91L7uGQsX_KaWuPqCGphfp0jPV8vGUQWFvaAkPyQ
+
+
+### UPDATE A Entry Diary
+PUT http://localhost:8000/api/entry/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYXQiOjE2OTg4MTQ1MzMsImlhdCI6MTY5ODgxMjUzMywiaWQiOjF9.Qbc91L7uGQsX_KaWuPqCGphfp0jPV8vGUQWFvaAkPyQ
+
+{
+    "content": "A sample content update"
+}
+
+### DELETE A Entry Diary
+DELETE http://localhost:8000/api/entry/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlYXQiOjE2OTg4MTQ1MzMsImlhdCI6MTY5ODgxMjUzMywiaWQiOjF9.Qbc91L7uGQsX_KaWuPqCGphfp0jPV8vGUQWFvaAkPyQ
